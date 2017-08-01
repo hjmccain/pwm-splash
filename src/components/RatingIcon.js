@@ -2,21 +2,16 @@ import React from 'react';
 
 const RatingIcon = (props) => {
 
-  const { num, classNameVal } = props;
-
-  const toggleSelected = (selected, unselected) => {
-    props.changeStateValue('userRating', selected);
-    props.updateIcons(selected, unselected);
-  }
+  const { selected, classNameVal } = props;
 
   return (
     <div>
       <div
         className={classNameVal}
-        id={num}
-        onClick={() => toggleSelected(10 - num, num)}>
+        id={selected}
+        onClick={() => props.changeStateValue('userRating', selected)}>
       </div>
-      <p>{props.num}</p>
+      <p>{props.selected}</p>
     </div>
   )
 

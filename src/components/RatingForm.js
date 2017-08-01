@@ -4,6 +4,8 @@ import RatingIcon from './RatingIcon';
 
 const RatingForm = (props) => {
 
+  const { changeStateValue, selected, unselected } = props;
+
   const makeArray = (num, type) => {
     return Array
       .from(new Array(num), (val, idx) => idx)
@@ -14,19 +16,19 @@ const RatingForm = (props) => {
 
   const icons = (selectedCount, unselectedCount) => {
     let iconsArray = [...makeArray(selectedCount, 'selected'), ...makeArray(unselectedCount, 'unselected')];
+    console.log(iconsArray);
     return iconsArray.map((e, i) => {
       return <RatingIcon
         key={i}
-        num={i + 1}
-        updateIcons={icons}
-        changeStateValue={props.changeStateValue}
+        selected={i + 1}
+        changeStateValue={changeStateValue}
         classNameVal={`rating-icon ${e}`} />
     });
   }
 
   return (
     <div>
-      { icons(0, 10) }
+      { icons(selected, unselected) }
       <p>Postal Code</p>
       <input type="text"></input>
     </div>
