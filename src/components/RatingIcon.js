@@ -2,16 +2,16 @@ import React from 'react';
 
 const RatingIcon = (props) => {
 
-  const { selected, classNameVal } = props;
+  const { num, classNameVal } = props;
 
   return (
     <div>
       <div
         className={classNameVal}
-        id={selected}
-        onClick={() => props.changeStateValue('userRating', selected)}>
+        id={num}
+        onClick={() => props.changeStateValue('userRating', num)}>
       </div>
-      <p>{props.selected}</p>
+      <p>{props.num}</p>
     </div>
   )
 

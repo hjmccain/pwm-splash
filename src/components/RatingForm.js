@@ -16,11 +16,10 @@ const RatingForm = (props) => {
 
   const icons = (selectedCount, unselectedCount) => {
     let iconsArray = [...makeArray(selectedCount, 'selected'), ...makeArray(unselectedCount, 'unselected')];
-    console.log(iconsArray);
     return iconsArray.map((e, i) => {
       return <RatingIcon
         key={i}
-        selected={i + 1}
+        num={i + 1}
         changeStateValue={changeStateValue}
         classNameVal={`rating-icon ${e}`} />
     });
@@ -30,7 +29,10 @@ const RatingForm = (props) => {
     <div>
       { icons(selected, unselected) }
       <p>Postal Code</p>
-      <input type="text"></input>
+      <input
+        id="zipcode"
+        type="text"
+      />
     </div>
   )
 
