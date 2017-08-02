@@ -1,0 +1,32 @@
+#background {
+  height: 100vh;
+  background-image: url('../assets/jetport.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  #background-filter {
+    background: rgba(0,0,0,0.7);
+    height: 100vh;
+  }
+
+  #container {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+    #logo {
+      width: 300px;
+    }
+  }
+
+  button {
+    border: none;
+    height: 32px;
+    width: 202px;
+    background-color: #8b8b89;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+  }
+
+}

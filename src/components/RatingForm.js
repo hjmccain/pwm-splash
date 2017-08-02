@@ -26,13 +26,19 @@ const RatingForm = (props) => {
   }
 
   return (
-    <div>
-      { icons(selected, unselected) }
-      <p>Postal Code</p>
-      <input
-        id="zipcode"
-        type="text"
-      />
+    <div id="form-container">
+      <div id="rating-container">
+        <p className="yellow">How would you rate your PWM experience today?</p>
+        { icons(selected, unselected) }
+        <p>1 being poor, 10 being excellent</p>
+      </div>
+      <div id="zipcode-container">
+        <p className="yellow">Zip Code</p>
+        <input
+          id="zipcode"
+          type="text"
+        />
+      </div>
     </div>
   )
 

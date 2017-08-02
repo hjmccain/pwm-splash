@@ -1,0 +1,27 @@
+#wifi-container {
+  margin: 0px 0px 20px 0px;
+  position: relative;
+
+  * {
+    display: inline-block;
+  }
+
+  input {
+    margin-right: 10px;
+  }
+  // input[type="checkbox"] {
+  //   height: 100px;
+  //   width: 100px;
+  //   position: relative;
+  //   left: 100px;
+  // }
+  //
+  // input[type="checkbox"] + label span {
+  //   display: inline-block;
+  //   width: 100px;
+  //   height: 100px;
+  //   background-color: blue;
+  //   margin-right: 10px;
+  // }
+
+}

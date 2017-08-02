@@ -22,7 +22,6 @@ class FormContainer extends Component {
     e.preventDefault();
     if (!this.state.userAccept) {
       alert("Please accept PWM Wifi terms & conditions.");
-
     } else {
       if (this.checkValue(document.getElementById('zipcode').value)) {
         this.postFormInfo();

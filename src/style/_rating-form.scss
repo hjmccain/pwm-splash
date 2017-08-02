@@ -1,0 +1,60 @@
+#form-container {
+
+  p {
+    flex-basis: 100%;
+    margin: 10px 0px 10px 0px;
+  }
+
+  #rating-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .rating {
+      width: fit-content;
+      margin: 5px auto;
+
+      .rating-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+
+      .selected {
+        background-color: $yellow;
+        border: 2px solid $yellow;
+      }
+
+      p {
+        color: #8b8b89;
+        margin: 5px 0px 0px 0px;
+      }
+    }
+
+  }
+
+  #zipcode-container {
+    margin: 20px 0px 20px 0px;
+
+    * {
+      display: inline-block;
+    }
+
+    p {
+      vertical-align: middle;
+    }
+
+    #zipcode {
+      padding: 0px 10px 0px 10px;
+      font-size: 1em;
+      height: 30px;
+      width: 180px;
+      border-radius: 10px;
+      border: none;
+      margin-left: 20px;
+    }
+
+  }
+
+}

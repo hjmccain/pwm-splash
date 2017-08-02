@@ -5,9 +5,13 @@ import FormContainer from './FormContainer';
 
 const AppContainer = () => {
   return (
-    <div>
-      <SplashHeader />
-      <FormContainer />
+    <div id="background">
+      <div id="background-filter">
+        <div id="container">
+          <SplashHeader />
+          <FormContainer />
+        </div>
+      </div>
     </div>
   )
 }

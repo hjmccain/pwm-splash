@@ -5,7 +5,7 @@ const RatingIcon = (props) => {
   const { num, classNameVal } = props;
 
   return (
-    <div>
+    <div className="rating">
       <div
         className={classNameVal}
         id={num}
