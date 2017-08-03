@@ -18,7 +18,7 @@ class FormContainer extends Component {
 
   render() {
     return (
-      <form onSubmit={e => submitResponses(e, this.state.userAccept, this.state.userRating)}>
+      <form onSubmit={e => submitResponses(e, this.state.userAccept, this.state.userRating, this.state.zipcode)}>
         <RatingForm changeStateValue={this.changeStateValue} selected={this.state.userRating || 0} unselected={10 - (this.state.userRating)} />
         <WifiForm changeStateValue={this.changeStateValue} userAccept={this.state.userAccept} />
         <button type="Submit">Submit</button>
