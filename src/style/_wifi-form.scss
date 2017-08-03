@@ -6,22 +6,28 @@
     display: inline-block;
   }
 
-  input {
-    margin-right: 10px;
+  input[type="checkbox"] {
+    display: none;
   }
-  // input[type="checkbox"] {
-  //   height: 100px;
-  //   width: 100px;
-  //   position: relative;
-  //   left: 100px;
-  // }
-  //
-  // input[type="checkbox"] + label span {
-  //   display: inline-block;
-  //   width: 100px;
-  //   height: 100px;
-  //   background-color: blue;
-  //   margin-right: 10px;
-  // }
+
+  input[type="checkbox"] + label span {
+    #checked {
+      display: none;
+    }
+    #unchecked {
+      display: inline-block;
+      margin-right: 12.75px;
+    }
+  }
+
+  input[type="checkbox"]:checked + label span {
+    #checked {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    #unchecked {
+      display: none;
+    }
+  }
 
 }

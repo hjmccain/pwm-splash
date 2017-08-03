@@ -11,7 +11,13 @@ const WifiForm = (props) => {
         type="checkbox"
         onClick={() => changeStateValue('userAccept', !userAccept)}
       />
-    <p>I accept PWM Wi-Fi terms & conditions</p>
+    <label htmlFor="wifi-agreement">
+      <span>
+        <i className="fa fa-square-o fa-lg" id="unchecked" aria-hidden="true"></i>
+        <i className="fa fa-check-square-o fa-lg" id="checked" aria-hidden="true"></i>
+      </span>
+      I accept PWM Wi-Fi terms & conditions
+    </label>
     </div>
   )
 }

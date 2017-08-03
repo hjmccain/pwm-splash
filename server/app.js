@@ -13,33 +13,30 @@ const con = mysql.createConnection({
   database: 'pwm_test'
 });
 
+app.use(bodyParser.json());
+
 con.connect((err) => {
   if(err){
     console.log('Error connecting to DB:', err);
     return;
   }
-  console.log('Connection established!');
+  console.log('DB connection established!');
 });
 
-app.use(bodyParser.json());
-
 app.post('/feedback', (req, res) => {
-  let userData = Object.assign({}, req.body, {
-    date: moment().format()
-  });
-
-  console.log(userData);
+  let error = false;
+  const userData = Object.assign({}, req.body, { date: moment().format() });
 
   con.query('INSERT INTO user_data SET ?', userData, (err, res) => {
-    if (err) throw err;
-    console.log('Insert completed');
+    if (err) {
+      error = true;
+      throw err;
+    }
   });
 
-  con.end((err) => {
-    // The connection is terminated gracefully
-  });
+  con.end((err) => {});
 
-  return res.sendStatus(200);
+  return error ? res.sendStatus(500) : res.sendStatus(200);
 });
 
 app.get('*', (req, res) => {
