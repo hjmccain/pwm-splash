@@ -1,3 +1,6 @@
+
+// TODO: make RatingForm a controlled component (add to zipcode state)
+
 import React from 'react';
 
 import IconElement from './IconElement';

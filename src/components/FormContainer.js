@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import RatingForm from './RatingForm';
 import WifiForm from './WifiForm';
-import { checkValue, submitResponses, postFormInfo, acceptWifiAgreement } from './workerFunctions';
+import { submitResponses } from './workerFunctions';
 
 class FormContainer extends Component {
 

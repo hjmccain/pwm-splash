@@ -34,6 +34,20 @@ export const postFormInfo = (userRating) => {
     'zipcode', document.getElementById('zipcode').value,
     'user rating', userRating
   );
+
+  return fetch('/feedback', {
+    method: 'post',
+    headers: {
+      'Content-type': 'application/json; charset=utf-8'
+    },
+    body: JSON.stringify({ userRating })
+  })
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(res.statusText);
+    }
+    return res;
+  });
 }
 
 export const acceptWifiAgreement = () => {
