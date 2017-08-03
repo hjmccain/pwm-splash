@@ -1,13 +1,17 @@
 
 // TODO: make RatingForm a controlled component (add to zipcode state)
 
-import React from 'react';
+import React, { Component } from 'react';
 
 import IconElement from './IconElement';
 
 const RatingForm = (props) => {
 
   const { changeStateValue, selected, unselected } = props;
+
+  const handleChange = (event) => {
+    changeStateValue('zipcode', event.target.value);
+  }
 
   return (
     <div id="form-container">
@@ -21,6 +25,7 @@ const RatingForm = (props) => {
         <input
           id="zipcode"
           type="text"
+          onChange={handleChange}
         />
       </div>
     </div>

@@ -29,11 +29,7 @@ export const submitResponses = (e, userAccept, userRating) => {
 }
 
 export const postFormInfo = (userRating) => {
-  console.log(
-    'Post form info to DB.',
-    'zipcode', document.getElementById('zipcode').value,
-    'user rating', userRating
-  );
+  // const zipcode = document.getElementById('zipcode').value;
 
   return fetch('/feedback', {
     method: 'post',

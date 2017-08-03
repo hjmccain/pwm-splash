@@ -8,6 +8,7 @@ class FormContainer extends Component {
 
   state = {
     userRating: null,
+    zipcode: null,
     userAccept: false
   }
 
