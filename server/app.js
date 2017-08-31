@@ -15,6 +15,10 @@ const con = mysql.createConnection({
 
 app.use(bodyParser.json());
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('../build'));
+}
+
 con.connect((err) => {
   if(err){
     console.log('Error connecting to DB:', err);
@@ -43,10 +47,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
-// app.use(express.static(path.resolve(__dirname, '..', 'build')));
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../build'));
-}
+app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 module.exports = app;
