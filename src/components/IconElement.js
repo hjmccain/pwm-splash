@@ -1,7 +1,7 @@
 import React from 'react';
 
 import RatingIcon from './RatingIcon';
-import { makeArray } from './workerFunctions';
+import { makeArray } from './workerFunctions/makeArray';
 
 const IconElement = (selectedCount, unselectedCount, changeStateValue) => {
   let iconsArray = [...makeArray(selectedCount, 'selected'), ...makeArray(unselectedCount, 'unselected')];

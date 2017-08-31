@@ -5,7 +5,7 @@ import pwm from '../assets/original_PWM_tag_white.png';
 
 const timeOfDay = () => {
   let now = moment().format('HH');
-  now = parseInt(now);
+  now = parseInt(now, 10);
   let greetingTime;
 
   if (now >= 0 && now <= 12) { greetingTime = 'morning' }

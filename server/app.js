@@ -20,7 +20,7 @@ con.connect((err) => {
     console.log('Error connecting to DB:', err);
     return;
   }
-  console.log('DB connection established!');
+  console.log('DB connection established.');
 });
 
 app.post('/feedback', (req, res) => {
@@ -34,7 +34,7 @@ app.post('/feedback', (req, res) => {
     }
   });
 
-  con.end((err) => {});
+  // con.end((err) => {});
 
   return error ? res.sendStatus(500) : res.sendStatus(200);
 });
