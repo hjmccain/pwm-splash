@@ -34,7 +34,7 @@ app.post('/feedback', (req, res) => {
     }
   });
 
-  // con.end((err) => {});
+  con.end((err) => {});
 
   return error ? res.sendStatus(500) : res.sendStatus(200);
 });
